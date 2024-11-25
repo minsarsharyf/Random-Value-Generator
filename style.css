@@ -1,0 +1,138 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.input-section {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#amountInput {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+  border: 1px solid var(--input-border);
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+#generateButton {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#generateButton:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.results {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.result-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.result-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+.result-button.gray-out {
+  background-color: var(--button-disabled-bg);
+  color: var(--button-disabled-text);
+  text-decoration: line-through;
+  pointer-events: none;
+}
+
+.result-summary {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Light theme */
+:root {
+  --bg: #f4f4f9;
+  --text: #1e1e2f;
+  --container-bg: #ffffff;
+  --input-bg: #ffffff;
+  --input-text: #000000;
+  --input-border: #cccccc;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --button-hover-bg: #0056b3;
+  --button-disabled-bg: #cccccc;
+  --button-disabled-text: #666666;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1e1e2f;
+    --text: #f4f4f9;
+    --container-bg: #2a2a3b;
+    --input-bg: #333344;
+    --input-text: #ffffff;
+    --input-border: #4a4a5e;
+    --button-bg: #6c63ff;
+    --button-text: #ffffff;
+    --button-hover-bg: #5750d5;
+    --button-disabled-bg: #4a4a5e;
+    --button-disabled-text: #9a9aaf;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  background-color: var(--container-bg);
+  color: var(--text);
+}
